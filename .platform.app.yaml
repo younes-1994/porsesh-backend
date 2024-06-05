@@ -1,0 +1,24 @@
+name: app
+
+type: "python:3.9"
+
+dependencies:
+    pip: "requirements.txt"
+
+web:
+    commands:
+        start: "uvicorn main:app --host 0.0.0.0 --port 8000"
+    locations:
+        "/":
+            root: "public"
+            passthru: true
+            allow: true
+
+relationships:
+    database: "mysql:mysql"
+
+hooks:
+    build: |
+        pip install -r requirements.txt
+
+disk: 1024
