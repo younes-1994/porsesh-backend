@@ -4,10 +4,10 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 
-db_username = "sql12711306"
-db_password = "DEwzyfnldl"
-db_url = "sql12.freemysqlhosting.net:3306"
-db_name = "sql12711306"
+db_username = "root"
+db_password = "PuigKcStMFGje584"
+db_url = "services.irn6.chabokan.net:46763"
+db_name = "nigel"
 DATABASE_URL = f'mysql+mysqlconnector://{db_username}:{db_password}@{db_url}/{db_name}?charset=utf8mb4'
 
 # Retrieve database credentials from environment variables
